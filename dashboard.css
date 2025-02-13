@@ -1,0 +1,316 @@
+/* Modern Dashboard Styles for TikaBites */
+:root {
+    --primary: #ff6b6b;
+    --primary-dark: #ff5252;
+    --secondary: #4ecdc4;
+    --accent: #ffe66d;
+    --dark: #2d3436;
+    --light: #ffffff;
+    --gray-light: #f7f7f7;
+    --gray: #dfe6e9;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--gray-light);
+    color: var(--text-primary);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background: var(--light);
+    width: 280px;
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 235px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.sidebar nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar nav li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.sidebar nav a:hover {
+    background: var(--primary);
+    color: var(--light);
+    transform: translateX(5px);
+}
+
+.sidebar nav a i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    background: var(--gray-light);
+    width: 100%;
+    min-width: 0; /* Prevents content from overflowing */
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gray);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin: 0;
+}
+
+.user-info {
+    background: var(--primary);
+    color: var(--light);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Stats Cards */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary);
+}
+
+.stat-card h3 {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+}
+
+.stat-card p {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Revenue Cards */
+.revenue-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.revenue-card {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    padding: 1.5rem;
+    border-radius: 15px;
+    color: var(--light);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.revenue-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.revenue-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.revenue-card p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Tables Styling */
+.order-summary,
+.recent-activity {
+    background: var(--light);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.order-summary h2,
+.recent-activity h2 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    background: var(--gray-light);
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid var(--gray);
+}
+
+td {
+    padding: 1rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--gray);
+}
+
+tbody tr:hover {
+    background-color: var(--gray-light);
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(to right, var(--light), var(--gray-light));
+    padding: 1rem;
+    text-align: center;
+    border-top: 2px solid var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+footer p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+}
+
+footer div {
+    margin-top: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .revenue-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+

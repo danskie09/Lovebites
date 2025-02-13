@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Activity Logs Container */
+.activity-logs-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width:auto;
+    margin: 20px auto;
+}
+
+/* Table Styling */
+.activity-logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.activity-logs-table th,
+.activity-logs-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.activity-logs-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.activity-logs-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.activity-logs-table tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    background-color: white;
+    color: #007bff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #f1f1f1;
+}

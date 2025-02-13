@@ -1,0 +1,126 @@
+.main-content {
+    flex: 1;
+  padding: 2rem;
+  background: var(--gray-light);
+  width: 100%;
+  min-width: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+  
+}
+
+header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+header .user-info {
+    background-color: #f44e5b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.staff-management-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.staff-actions {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.staff-actions h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.staff-actions .staff-form input,
+.staff-actions .staff-form select,
+.staff-actions .staff-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.staff-actions .staff-form button {
+    background-color: #f44e5b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.staff-actions .staff-form button:hover {
+    background-color: #d43e4b;
+}
+
+.staff-list-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.staff-list-container h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.staff-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.staff-list-table th,
+.staff-list-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.staff-list-table th {
+    background-color: #f4f4f4;
+    color: #2c3e50;
+}
+
+.staff-list-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.action-buttons .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+}
+
+.action-buttons .btn-edit {
+    background-color: #3a7ca5;
+}
+
+.action-buttons .btn-delete {
+    background-color: #f44e5b;
+}
+
+.action-buttons .btn:hover {
+    opacity: 0.8;
+}
